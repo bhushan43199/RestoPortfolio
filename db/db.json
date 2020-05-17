@@ -1,0 +1,39 @@
+{
+  "restaurant": [
+    {
+      "name": "Pizza ",
+      "email": "pizzahut@test.com",
+      "rating": "4.5",
+      "adr": "Gujarat",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "name": "Pizza Hut 2",
+      "adr": "Gujarat",
+      "rating": "4.6",
+      "email": "pizzahut2@test.com"
+    },
+    {
+      "id": 3,
+      "name": "Pizza Hut3",
+      "adr": "Gujarat",
+      "rating": "4.7",
+      "email": "pizzahut2@test.com"
+    },
+    {
+      "id": 4,
+      "name": "Pizza Hut4",
+      "adr": "Gujarat",
+      "rating": "4.8",
+      "email": "pizzahut8@test.com"
+    },
+    {
+      "name": "Sankalp",
+      "email": "Sankap2GMAIL.COM",
+      "adr": "Ahmedabad",
+      "rating": "4",
+      "id": 5
+    }
+  ]
+}
