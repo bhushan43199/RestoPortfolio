@@ -34,6 +34,13 @@
       "adr": "Ahmedabad",
       "rating": "4",
       "id": 5
+    },
+    {
+      "name": "Mantra",
+      "email": "Mantra@gmail.com",
+      "adr": "Corona",
+      "rating": "4.1",
+      "id": 6
     }
   ]
 }
