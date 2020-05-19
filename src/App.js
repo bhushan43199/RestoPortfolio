@@ -9,7 +9,7 @@ import {
   Link,
 
 } from 'react-router-dom'
-import {Navbar,Nav} from 'react-bootstrap'
+import { Navbar, Nav } from 'react-bootstrap'
 
 import Home from './components/Home'
 import RestaurantCreate from './components/RestauranstCreate'
@@ -18,6 +18,7 @@ import RestaurantList from './components/RestauranstList'
 import RestaurantSearch from './components/RestauranstSearch'
 import RestaurantUpdate from './components/RestauranstUpdate'
 import Login from './components/Login'
+import Logout from './components/Logout'
 
 
 
@@ -25,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <Navbar bg="light" expand="lg">
+        {/*  <Navbar bg="light" expand="lg">
   <Navbar.Brand href="#home">Resto</Navbar.Brand>
   <Navbar.Toggle aria-controls="basic-navbar-nav" />
   <Navbar.Collapse id="basic-navbar-nav">
@@ -39,13 +40,19 @@ function App() {
 {/*       <Nav.Link href="#link"><Link to="/detail">Detail</Link></Nav.Link>
  */}{/*       <Nav.Link href="#link"><Link to="/update">Update</Link></Nav.Link>
  */}
-      
+        {/*   
     </Nav>
     
   </Navbar.Collapse>
 </Navbar>
-        
-        <Route path="/list">
+     */}
+
+
+
+        {/* We have created navigation bar in component */}
+{/*         <NavbarManu /> 
+          shifted navbarmanu in to every component so perform login and logout
+ */}        <Route path="/list">
           <RestaurantList />
         </Route>
         <Route path="/create">
@@ -59,16 +66,19 @@ function App() {
         </Route>
         {/* Now we are parsing props to edit id from list */}
         <Route path="/update/:id"
-        render={(props=>(<RestaurantUpdate {...props} />)
-          )}
-        >
-          
-        </Route>
-        <Route path="/login"
-        render={props=>(<Login {...props}/>
+          render={(props => (<RestaurantUpdate {...props} />)
           )}
         >
 
+        </Route>
+        <Route path="/login"
+          render={props => (<Login {...props} />
+          )}
+        >
+
+        </Route>
+        <Route path="/logout">
+          <Logout />
         </Route>
         <Route exact path="/">
           <Home />

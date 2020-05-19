@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Table } from 'react-bootstrap'
+import NavbarManu from './NavbarManu'
 
 class RestauranstSearch extends Component {
   /*  */
@@ -36,6 +37,7 @@ class RestauranstSearch extends Component {
     render() {
         return (
             <div>
+                <NavbarManu />
                 Restaurants Search
                 <Table striped bordered hover>
                     <thead>

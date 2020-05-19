@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavbarManu from './NavbarManu'
 
 class RestauranstCreate extends Component {
 
@@ -40,6 +41,7 @@ class RestauranstCreate extends Component {
     render() {
         return (
             <div>
+                <NavbarManu />
                 Restaurants Create
                 <div>
                     <input onChange={(event) => { this.setState({ name: event.target.value }) }} placeholder="Restaurant name" />

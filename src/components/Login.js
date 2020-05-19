@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavbarManu from './NavbarManu'
 
 class Login extends Component {
     constructor()
@@ -17,8 +18,9 @@ class Login extends Component {
             data.json().then((resp)=>{
                 console.log(resp)
                 if(resp.length>0)
-                {
-                    
+                {   
+                    localStorage.setItem("login", JSON.stringify(resp))
+                    // after login this will redirect to list page
                     console.log(this.props.history.push('list'))
                     /*  */
 
@@ -33,6 +35,7 @@ class Login extends Component {
     render() {
         return (
             <div>
+                <NavbarManu />
                 Login
                 <br>
                 </br>

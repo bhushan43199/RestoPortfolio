@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavbarManu from './NavbarManu'
 
 class RestauranstUpdate extends Component {
     constructor()
@@ -59,6 +60,7 @@ class RestauranstUpdate extends Component {
         console.log(this.props.match.params.id)
         return (
             <div>
+                <NavbarManu />
                <h1> Restaurants Update></h1>
                 <div>
                 <input onChange={(event) => { this.setState({ id: event.target.value }) }} placeholder="Restaurant name"
