@@ -2,7 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faEdit, faTrash, faList, faHome, faPlus, faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faCoffee, faEdit, faTrash, faList, faHome, faPlus, faSearch, faUser } from '@fortawesome/free-solid-svg-icons'
 import {
   BrowserRouter as Router,
   Route,
@@ -17,6 +17,8 @@ import RestaurantDetail from './components/RestauranstDetail'
 import RestaurantList from './components/RestauranstList'
 import RestaurantSearch from './components/RestauranstSearch'
 import RestaurantUpdate from './components/RestauranstUpdate'
+import Login from './components/Login'
+
 
 
 function App() {
@@ -32,6 +34,8 @@ function App() {
       <Nav.Link href="#link"><Link to="/list"><FontAwesomeIcon icon={faList}></FontAwesomeIcon>List</Link></Nav.Link>
       <Nav.Link href="#link"><Link to="/create"> <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>Create</Link></Nav.Link>
       <Nav.Link href="#link"><Link to="/search"><FontAwesomeIcon icon={faSearch}></FontAwesomeIcon>Search</Link></Nav.Link>
+      <Nav.Link href="#link"><Link to="/login"><FontAwesomeIcon icon={faUser}></FontAwesomeIcon>Login</Link></Nav.Link>
+
 {/*       <Nav.Link href="#link"><Link to="/detail">Detail</Link></Nav.Link>
  */}{/*       <Nav.Link href="#link"><Link to="/update">Update</Link></Nav.Link>
  */}
@@ -59,6 +63,12 @@ function App() {
           )}
         >
           
+        </Route>
+        <Route path="/login"
+        render={props=>(<Login {...props}/>
+          )}
+        >
+
         </Route>
         <Route exact path="/">
           <Home />
