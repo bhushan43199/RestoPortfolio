@@ -19,6 +19,7 @@ import RestaurantSearch from './components/RestauranstSearch'
 import RestaurantUpdate from './components/RestauranstUpdate'
 import Login from './components/Login'
 import Logout from './components/Logout'
+import Protected from './components/Protected'
 
 
 
@@ -50,9 +51,10 @@ function App() {
 
 
         {/* We have created navigation bar in component */}
-{/*         <NavbarManu /> 
+        {/*         <NavbarManu /> 
           shifted navbarmanu in to every component so perform login and logout
- */}        <Route path="/list">
+ */}
+        {/* <Route path="/list">
           <RestaurantList />
         </Route>
         <Route path="/create">
@@ -60,17 +62,18 @@ function App() {
         </Route>
         <Route path="/search">
           <RestaurantSearch />
-        </Route>
-        <Route path="/detail">
+        </Route> */}
+        {/* <Route path="/detail">
           <RestaurantDetail />
-        </Route>
+        </Route> */}
+
         {/* Now we are parsing props to edit id from list */}
-        <Route path="/update/:id"
+        {/* <Route path="/update/:id"
           render={(props => (<RestaurantUpdate {...props} />)
           )}
         >
 
-        </Route>
+        </Route> */}
         <Route path="/login"
           render={props => (<Login {...props} />
           )}
@@ -80,9 +83,18 @@ function App() {
         <Route path="/logout">
           <Logout />
         </Route>
-        <Route exact path="/">
+        {/* <Route exact path="/">
           <Home />
-        </Route>
+        </Route> */}
+        {/* Here added home component into protected route */}
+        <Protected exact path="/" component={Home} />
+        <Protected exact path="/list" component={RestaurantList} />
+        <Protected exact path="/create" component={RestaurantCreate} />
+        <Protected exact path="/search" component={RestaurantSearch} />
+        <Protected exact path="/detail" component={RestaurantDetail} />
+        <Protected exact path="//update/:id" component={RestaurantUpdate} />
+
+
       </Router>
     </div>
   );
